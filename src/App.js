@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import './App.css';
 
 
 const App = () => {
@@ -26,14 +25,14 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="contanier">
       <h2>To-Do List </h2>
       <input type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)}
 
         placeholder="Enter a task..." />
 
 
-      <button onClick={handleAddTodo}>Add</button>
+      <button  style={{}} onClick={handleAddTodo}>Add</button>
       <ul>
         {todo.map((todo, index) => (
           <li key={index} style={{ display: "flex" }}>
@@ -45,7 +44,7 @@ const App = () => {
                 onChange={() => handleToggleTodo(index)}
               />
               <span
-                style={{ marginRight: "10px", textDecoration: todo.checked ? "Line-through" : "none", }}>{todo.text}</span>
+                style={{ marginRight: "5px", textDecoration: todo.checked ? "Line-through" : "none", }}>{todo.text}</span>
               <button style={{ marginTop: "5px", marginBottom: "5px" }} type="submit" onClick={() => handleDeleteTodo(index)}>Delete</button>
             </div>
 
